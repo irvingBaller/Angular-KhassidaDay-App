@@ -1,0 +1,41 @@
+<section class="bg-light mt-3">
+  <div class="row align-items-center">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Adding Khassida Singer</h2>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            <div class="form-group">
+              <label class="control-label">
+                Full Name
+              </label>
+              <input type="text" name="fullname" id="fullname" [(ngModel)]="singer.fullname"  class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="control-label">
+                Cover Image
+              </label>
+              <input type="file" name="coverImageUrl" id="coverImageUrl" [(ngModel)]="singer.coverImageUrl"
+                    (change)="onFileImageSelected($event)"
+                     class="form-control" required />
+            </div>
+            <div *ngIf="selectedImageFile">
+              <img [src]="selectedImageFileName">
+            </div>
+
+            <div class="form-group">
+              <input type="button" class="btn btn-success" value="Add Khassida Singer" (click)="addKhassidaSinger();" />
+            </div>
+            <div class="pull-right">
+              <a routerLink="/list-khassida-singers" class="btn btn-primary btn-sm">List Khassida Singers</a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

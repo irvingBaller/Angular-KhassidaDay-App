@@ -1,0 +1,93 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 8px solid #ffffff;
+}
+h1 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #010100;
+  /*margin-bottom: 15%;*/
+}
+
+
+#form {
+  margin-top: 15%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.ion-button {
+  margin-top: 35px;
+  height: 48px;
+  font-size: 18px;
+  text-transform: initial;
+  border-radius: 50px;
+  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+  --box-shadow: none;
+}
+
+.ion-input {
+  border-radius: 50px;
+  height: 75px;
+  width: 80%;
+  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
+  --highlight-height: 0px;
+
+  font-size: 18px;
+  --padding-top: 30px;
+  --padding-bottom: 15px;
+  --padding-start: 5px;
+}
+
+.form-rounded{
+  border-radius: 5rem;
+  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
+  height: 45px;
+  width: 75%;
+
+  /*margin-right: 50px;*/
+
+
+
+}
+.form-rounded2{
+  border-radius: 5rem;
+  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
+  height: 45px;
+  width: 75%;
+  /*margin-right: 50px;*/
+
+  /*position: absolute;*/
+  /*left: 25%;*/
+  /*top: 80px;*/
+
+}
+.form-rounded-3{
+  /*position: absolute;*/
+  /*left: 25%;*/
+  /*top: 150px;*/
+  height: 45px;
+  width: 75%;
+}
+.form-rounded-4{
+  /*position: absolute;*/
+  /*left: 25%;*/
+  /*top: 220px;*/
+  height: 45px;
+  width: 75%;
+}
+h1{
+  font-weight: bold;
+  font-family: "Apple SD Gothic Neo";
+}
+
+
+
+
+

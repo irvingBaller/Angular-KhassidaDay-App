@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Khassida Day Members</h4>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-success" *ngIf="message">{{message.message}}</div>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+            <th>
+              Id
+            </th>
+            <th>
+              First Name
+            </th>
+            <th>
+              Last Name
+            </th>
+            <th>
+              EMail
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Avatar
+            </th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.id}}</td>
+              <td>{{user.first_name}}</td>
+              <td>{{user.last_name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.username}}</td>
+              <td><img src="{{user.imageUserUrl}}" class="img-fluid" width="50px" height="50px"></td>
+              <td><a (click)="deleteUser(user.id);" class="btn btn-danger">Supprimer </a></td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

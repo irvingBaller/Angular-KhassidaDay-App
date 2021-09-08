@@ -1,0 +1,101 @@
+<section class="bg-light mt-3">
+  <div class="row align-items-center">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-header">
+<!--          <h2 class="card-title text-center">Account Creation de Compte</h2>-->
+          <div id="header">
+            <h4>KHASSIDA DAY ACCOUNT CREATION</h4>
+            <img src="assets/kd1.jpg" />
+          </div>
+
+        </div>
+        <div class="card-body">
+          <form method="post">
+            <div class="form-group">
+              <label class="control-label">
+                First Name
+              </label>
+              <input type="text" name="firstName" id="firstName" [(ngModel)]="user.first_name" placeholder="First Name"  class="form-control" required />
+            </div>
+            <div>
+              <label class="control-label">
+                Last Name
+              </label>
+              <input type="text" name="lastName" id="lastName" [(ngModel)]="user.last_name" placeholder="Last Name"  class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">
+                Email
+              </label>
+              <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="user.email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">
+                Username
+              </label>
+              <input type="text" name="username" id="username" class="form-control" [(ngModel)]="user.username" />
+<!--              <textarea  class="form-control" name="adresse" id="adresse" [(ngModel)]="user.adress"> </textarea>-->
+            </div>
+
+<!--            <div class="form-group">-->
+<!--              <label class="control-label">-->
+<!--                Email-->
+<!--              </label>-->
+<!--              <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="user.email"  class="form-control" required />-->
+<!--            </div>-->
+
+            <div class="form-group">
+              <label class="control-label">
+                Mot de Passe
+              </label>
+              <input type="password" name="password" id="password" placeholder="*****" [(ngModel)]="user.password" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="control-label">
+                Confirmation Mot de Passe
+              </label>
+              <input type="password" name="password_confirmation" id="password_confirmation" [(ngModel)]="user.password_confirmation" placeholder="*****"  class="form-control" required />
+            </div>
+
+
+             <div class="col-lg-4">
+               <div class="input-group">
+                 <div class="input-group-prepend">
+<!--                   <span class="input-group-text" id="inputGroupFileAddon01">Parcourir</span>-->
+                 </div>
+                 <div class="custom-file">
+                   <input type="file" class="custom-file-input" id="inputGroupFile01"
+                          [(ngModel)]="user.imageUrl"
+                          name="imageUrl"
+                          required
+
+                          aria-describedby="inputGroupFileAddon01"
+                          (change)="onFileSelectedChange($event)"
+
+
+                   >
+                   <label class="custom-file-label" for="inputGroupFile01">Choose Picture</label>
+                 </div>
+               </div>
+             </div>
+
+
+
+
+            <div class="form-group">
+              <input type="button" class="btn btn-success"  value="Register" (click)="register();" />
+            </div>
+            <!--            <div class="pull-right">-->
+            <!--              <a  class="btn btn-primary btn-sm" (click)="register();">Creer un compte</a>-->
+            <!--            </div>-->
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

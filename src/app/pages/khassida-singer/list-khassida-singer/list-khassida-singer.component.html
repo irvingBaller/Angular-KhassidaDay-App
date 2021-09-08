@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Khassida Day Surveys</h4>
+      </div>
+      <div class="pull-right mt-4 ml-4">
+        <a routerLink="/addKhassidaSinger" class="btn btn-round btn-secondary"
+
+        >Add Khassida Singer</a>
+      </div>
+      <div class="card-body">
+<!--        <div class="alert alert-success" *ngIf="message">{{message.message}}</div>-->
+        <div class="alert alert-success" *ngIf="deletionMessage">{{deletionMessage.message}}</div>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+            <th>
+              Id
+            </th>
+            <th>
+              Full Name
+            </th>
+            <th>
+              Cover Image
+            </th>
+
+            <th>Action</th>
+            <th>Action</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of khassidaSingers">
+              <td>{{user.id}}</td>
+              <td>{{user.fullname}}</td>
+              <td>
+                <img src="{{user.coverImageUrl}}" class="img-fluid">
+              </td>
+
+              <td>
+                <a class="btn btn-danger" (click)="deleteKhassidaSinger(user.id);">Delete</a>
+              </td>
+              <td>
+                <a class="btn btn-primary" (click)="editKhassidaSinger(user.id);">Edit</a>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

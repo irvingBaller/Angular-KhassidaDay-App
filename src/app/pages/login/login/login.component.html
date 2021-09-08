@@ -1,0 +1,54 @@
+<section class="bg-light mt-3">
+  <div class="row align-items-center">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card card1">
+        <div class="card-header">
+<!--          <h2 class="card-title">Adding Khassida Drouss</h2>-->
+
+        </div>
+
+        <div class="card-body">
+          <div id="header">
+            <h1>KHASSIDA DAY DASHBOARD APP</h1>
+            <img src="assets/kd1.jpg" />
+          </div>
+
+
+          <form>
+            <div class="form-group" id="header">
+              <input placeholder="Username"
+                     type="email" name="email" id="email"
+              class="form-control form-rounded"
+                     [(ngModel)]="email"
+              >
+            </div>
+            <div class="form-group" id="header">
+              <input type="password" placeholder="Password" name="password"
+                     [(ngModel)]="password"
+                     class="form-control form-rounded2 "
+              >
+            </div>
+            <div class="form-group" id="header">
+              <a (click)="login();" class="btn btn-round form-rounded-3 btn-primary">
+                Login
+              </a>
+            </div>
+
+            <div class="form-group" id="header">
+              <a routerLink="/register"  class="btn btn-round form-rounded-4" >Sign Up</a>
+
+
+            </div>
+
+
+
+
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Khassida Day Surveys</h4>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-success" *ngIf="message">{{message.message}}</div>
+        <div class="alert alert-success" *ngIf="deletionMessage">{{deletionMessage.message}}</div>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+            <th>
+              Id
+            </th>
+            <th>
+              Full Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              City
+            </th>
+            <th>
+              Confirmation Attendance
+            </th>
+            <th>
+              Mean
+            </th>
+            <th>
+              Arrival Date
+            </th>
+            <th>
+              Departure Date
+            </th>
+            <th>Action</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of surveys">
+              <td>{{user.id}}</td>
+              <td>{{user.full_name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.city}}</td>
+              <td class="text-center">{{user.attendance_confirmation}}</td>
+              <td>{{user.mean_of_transportation}}</td>
+              <td>{{user.arrival_date}}</td>
+              <td>{{user.departue_date}}</td>
+              <td>
+                <a class="btn btn-danger" (click)="deleteSurvey(user.id);">Supprimer</a>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
